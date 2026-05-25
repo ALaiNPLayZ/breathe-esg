@@ -1,0 +1,31 @@
+Report ID,Employee ID,Employee Name,Department,Expense Type,Travel Date,Origin,Destination,Class of Service,Distance (mi),Nights,Amount,Currency,Vendor,Carbon Est (kg CO2)
+RPT-20240108,EMP-1042,Sarah Chen,Strategy & Sustainability,Air Travel,2024-01-08,JFK,LHR,Economy,,0,1284.00,USD,British Airways,412.5
+RPT-20240108,EMP-1042,Sarah Chen,Strategy & Sustainability,Hotel,2024-01-08,LHR,LHR,,0,3,687.00,GBP,Hilton London Gatwick,35.4
+RPT-20240108,EMP-1042,Sarah Chen,Strategy & Sustainability,Taxi,2024-01-11,LHR,LHR,,12,0,48.50,GBP,Addison Lee,4.2
+RPT-20240108,EMP-1042,Sarah Chen,Strategy & Sustainability,Air Travel,2024-01-11,LHR,JFK,Economy,,0,1284.00,USD,British Airways,412.5
+RPT-20240115,EMP-2301,Marcus Williams,Operations,Air Travel,2024-01-15,ORD,FRA,Business,,0,4850.00,USD,Lufthansa,1847.2
+RPT-20240115,EMP-2301,Marcus Williams,Operations,Hotel,2024-01-15,FRA,FRA,,0,5,890.00,EUR,Marriott Frankfurt,52.5
+RPT-20240115,EMP-2301,Marcus Williams,Operations,Rail,2024-01-17,FRA,MUC,Economy,189,0,98.00,EUR,Deutsche Bahn,12.8
+RPT-20240115,EMP-2301,Marcus Williams,Operations,Air Travel,2024-01-20,MUC,ORD,Economy,,0,1920.00,USD,United Airlines,634.0
+RPT-20240122,EMP-0891,Priya Sharma,Finance,Air Travel,2024-01-22,BOM,SIN,Economy,,0,642.00,USD,IndiGo,398.2
+RPT-20240122,EMP-0891,Priya Sharma,Finance,Hotel,2024-01-22,SIN,SIN,,0,2,420.00,SGD,Marriott,22.4
+RPT-20240122,EMP-0891,Priya Sharma,Finance,Air Travel,2024-01-24,SIN,BOM,Economy,,0,642.00,USD,IndiGo,398.2
+RPT-20240205,EMP-3412,James Rodriguez,Sales,Air Travel,2024-02-05,IAH,LAX,Economy,1379,0,389.00,USD,Southwest Airlines,186.3
+RPT-20240205,EMP-3412,James Rodriguez,Sales,Car Rental,2024-02-05,LAX,LAX,,245,0,312.00,USD,Hertz,78.4
+RPT-20240205,EMP-3412,James Rodriguez,Sales,Hotel,2024-02-05,LAX,LAX,,0,3,620.00,USD,Marriott LA,31.5
+RPT-20240205,EMP-3412,James Rodriguez,Sales,Air Travel,2024-02-08,LAX,IAH,Economy,1379,0,389.00,USD,Southwest Airlines,186.3
+RPT-20240212,EMP-1042,Sarah Chen,Strategy & Sustainability,Air Travel,2024-02-12,JFK,CDG,Business,,0,6200.00,USD,Air France,2104.8
+RPT-20240212,EMP-1042,Sarah Chen,Strategy & Sustainability,Hotel,2024-02-12,CDG,CDG,,0,4,1240.00,EUR,Sofitel Paris,42.0
+RPT-20240212,EMP-1042,Sarah Chen,Strategy & Sustainability,Taxi,2024-02-16,CDG,CDG,,18,0,62.00,EUR,G7 Taxis,5.4
+RPT-20240212,EMP-1042,Sarah Chen,Strategy & Sustainability,Air Travel,2024-02-16,CDG,JFK,Business,,0,6200.00,USD,Air France,2104.8
+RPT-20240220,EMP-5521,David Kim,Engineering,Air Travel,2024-02-20,SFO,NRT,Economy,,0,1128.00,USD,ANA,916.4
+RPT-20240220,EMP-5521,David Kim,Engineering,Hotel,2024-02-20,NRT,NRT,,0,6,95400,JPY,Hyatt Tokyo,63.0
+RPT-20240220,EMP-5521,David Kim,Engineering,Rail,2024-02-22,TYO,OSA,Economy,248,0,13800,JPY,Shinkansen Nozomi,14.2
+RPT-20240220,EMP-5521,David Kim,Engineering,Air Travel,2024-02-26,NRT,SFO,Economy,,0,1128.00,USD,ANA,916.4
+RPT-20240307,EMP-2301,Marcus Williams,Operations,Air Travel,2024-03-07,ORD,AMS,Economy,,0,1560.00,USD,KLM,712.8
+RPT-20240307,EMP-2301,Marcus Williams,Operations,Hotel,2024-03-07,AMS,AMS,,0,3,654.00,EUR,Hilton Amsterdam,31.5
+RPT-20240307,EMP-2301,Marcus Williams,Operations,Air Travel,2024-03-10,AMS,ORD,Economy,,0,1560.00,USD,KLM,712.8
+RPT-20240315,EMP-0891,Priya Sharma,Finance,Ride Share,2024-03-15,BOM,BOM,,22,0,850,INR,Ola,3.8
+RPT-20240320,EMP-4102,Liu Yang,Procurement,Air Travel,2024-03-20,PVG,LAX,Economy,,0,1840.00,USD,Air China,1284.6
+RPT-20240320,EMP-4102,Liu Yang,Procurement,Hotel,2024-03-20,LAX,LAX,,0,4,720.00,USD,Sheraton,42.0
+RPT-20240320,EMP-4102,Liu Yang,Procurement,Air Travel,2024-03-24,LAX,PVG,Economy,,0,1840.00,USD,Air China,1284.6

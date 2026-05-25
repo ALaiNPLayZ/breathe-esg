@@ -1,0 +1,55 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: breathe_esg
+      POSTGRES_USER: breathe
+      POSTGRES_PASSWORD: breathe
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U breathe -d breathe_esg"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py create_demo_data &&
+             python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgres://breathe:breathe@db:5432/breathe_esg
+      SECRET_KEY: dev-only-key-not-for-production
+      DEBUG: "true"
+      ALLOWED_HOSTS: "localhost,127.0.0.1,backend"
+      CORS_ORIGINS: "http://localhost:5173"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    image: node:20-alpine
+    working_dir: /app
+    command: sh -c "npm ci && npm run dev -- --host 0.0.0.0"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    environment:
+      VITE_API_BASE: ""
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
