@@ -365,6 +365,20 @@ def _change_status(record: NormalizedRecord, user, new_status: str, action: str,
     return Response(NormalizedRecordSerializer(record).data)
 
 
+class MeView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        user = request.user
+        return Response({
+            "id": user.id,
+            "username": user.username,
+            "email": user.email,
+            "is_staff": user.is_staff,
+            "tenant_name": user.tenant.name if user.tenant else None,
+        })
+
+
 class StatsView(APIView):
     permission_classes = [IsAuthenticated]
 

@@ -97,6 +97,20 @@ export function isLoggedIn(): boolean {
   return !!getToken();
 }
 
+// ── Current user ─────────────────────────────────────────────────────────────
+
+export interface Me {
+  id: number;
+  username: string;
+  email: string;
+  is_staff: boolean;
+  tenant_name: string | null;
+}
+
+export function fetchMe(): Promise<Me> {
+  return request<Me>("/me/");
+}
+
 // ── Stats ────────────────────────────────────────────────────────────────────
 
 export function fetchStats(): Promise<Stats> {
