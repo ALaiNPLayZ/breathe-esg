@@ -89,12 +89,15 @@ STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_DIRS = []
 
-# Serve React build assets if the directory exists
-_frontend_assets = BASE_DIR / "frontend_build" / "assets"
-if _frontend_assets.exists():
-    STATICFILES_DIRS.append(_frontend_assets)
+# Serve the entire React build directory at the URL root so that
+# /assets/index-*.css and /assets/index-*.js are served with correct MIME types.
+# Without this, Django's catch-all URL pattern intercepts /assets/* requests
+# and returns text/html instead of the actual files.
+_frontend_build = BASE_DIR / "frontend_build"
+if _frontend_build.exists():
+    WHITENOISE_ROOT = _frontend_build
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
