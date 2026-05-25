@@ -30,6 +30,8 @@ services:
         value: .onrender.com
       - key: CORS_ORIGINS
         value: https://breathe-esg.onrender.com
+      - key: PYTHON_VERSION
+        value: "3.11.8"
 
 databases:
   - name: breathe-esg-db
